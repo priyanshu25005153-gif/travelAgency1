@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wanderlust Travels - Explore the World with Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background: #f6f7fb; color: #263238;}
+    header { background: #1976d2; color: #fff; padding: 2em 0; text-align: center; }
+    nav { background: #0d47a1; text-align: center; }
+    nav a {
+      color: #fff; padding: 1em 2em; display: inline-block; text-decoration: none; font-weight: bold;
+    }
+    nav a:hover { background: #1565c0; }
+    .container { max-width: 1000px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 12px; box-shadow: 0 0 24px #b0bec5;}
+    section { margin-bottom: 2.3em; }
+    h2 { color: #1976d2; margin-bottom: 0.5em; }
+    .packages-list {
+      display: flex; flex-wrap: wrap; gap: 2em;
+    }
+    .package {
+      background: #e3f2fd; padding: 1.3em 1.4em; border-radius: 8px; width: 230px;
+      box-shadow: 0 1px 4px #b3e5fc; margin-bottom: 1em;
+    }
+    .booking-form label { display: block; margin-bottom: 0.3em; }
+    .booking-form input, .booking-form select {
+      width: 98%; padding: 0.5em; border-radius: 5px; border: 1px solid #b0bec5; margin-bottom: 1em;
+    }
+    .booking-form button {
+      background: #1976d2; color: #fff; border: none; padding: 0.7em 2em;
+      font-size: 1em; border-radius: 5px; cursor: pointer;
+    }
+    .booking-form button:hover { background: #0d47a1;}
+    .tips-list {
+      padding-left: 1.1em;
+    }
+    .tips-list li {margin-bottom: 0.7em;}
+    .gallery {
+      display: flex; flex-wrap: wrap; gap: 1.3em;
+    }
+    .gallery img {
+      border-radius: 9px; width: 195px; height: 130px; object-fit: cover; box-shadow: 0 2px 8px #90caf9;
+      border: 2px solid #f7fafc;
+      background: #fff;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.09);
+      border: 2px solid #1976d2;
+    }
+    footer { background: #1976d2; color: #fff; text-align: center; padding: 1.3em 0; margin-top: 2em;}
+    @media (max-width: 700px) {
+      .container { padding: 1em; }
+      .packages-list, .gallery {flex-direction: column; gap: 1em;}
+      .package, .gallery img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wanderlust Travels</h1>
+    <p>Explore the World with Us</p>
+  </header>
+  <nav>
+    <a href="#packages">Tour Packages</a>
+    <a href="#booking">Booking</a>
+    <a href="#tips">Travel Tips</a>
+    <a href="#gallery">Gallery</a>
+  </nav>
+  <div class="container">
+    <!-- Tour Packages -->
+    <section id="packages">
+      <h2>Our Tour Packages</h2>
+      <div class="packages-list">
+        <div class="package">
+          <strong>Himalayan Adventure</strong>
+          <p>7 days / 6 nights<br>From ₹29,999</p>
+          <p>Explore the mountains with guided treks, camping, and more.</p>
+        </div>
+        <div class="package">
+          <strong>Goa Beach Fun</strong>
+          <p>5 days / 4 nights<br>From ₹19,499</p>
+          <p>Relax on sandy beaches, water sports, and vibrant nightlife.</p>
+        </div>
+        <div class="package">
+          <strong>Majestic Rajasthan</strong>
+          <p>8 days / 7 nights<br>From ₹34,999</p>
+          <p>Palaces & history, camel safari, and local cuisine experience.</p>
+        </div>
+        <div class="package">
+          <strong>Exotic Kerala</strong>
+          <p>6 days / 5 nights<br>From ₹23,999</p>
+          <p>Backwaters cruise, hill stations, wildlife, and ayurveda spa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking">
+      <h2>Book Your Tour</h2>
+      <form class="booking-form" onsubmit="alert('Thank you! We will contact you soon.'); return false;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <label for="package">Select Package:</label>
+        <select id="package" required>
+          <option value="">--Choose--</option>
+          <option>Himalayan Adventure</option>
+          <option>Goa Beach Fun</option>
+          <option>Majestic Rajasthan</option>
+          <option>Exotic Kerala</option>
+        </select>
+        <label for="date">Travel Date:</label>
+        <input type="date" id="date" required>
+        <button type="submit">Book Now</button>
+      </form>
+    </section>
+
+    <!-- Travel Tips -->
+    <section id="tips">
+      <h2>Travel Tips</h2>
+      <ul class="tips-list">
+        <li>Always keep digital and hard copies of your important documents.</li>
+        <li>Try local food, but stick to bottled water in unfamiliar places.</li>
+        <li>Book your accommodations and tours in advance for best rates.</li>
+        <li>Pack light and dress according to your destination’s weather.</li>
+        <li>Respect local customs and be a responsible traveler.</li>
+      </ul>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <h2>Gallery of Destinations</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Mountains">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Goa Beach">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="Rajasthan">
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Kerala Backwaters">
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=400&q=80" alt="Travel 1">
+        <img src="https://images.unsplash.com/photo-1465156799763-2c087c332922?auto=format&fit=crop&w=400&q=80" alt="Travel 2">
+      </div>
+    </section>
+  </div>
+  <footer>
+    &copy; 2025 Wanderlust Travels. All rights reserved.
+  </footer>
+</body>
+</html>
